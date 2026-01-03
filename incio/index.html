@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Solicitar Permissão de Notificação</title>
+</head>
+<body>
+    <h1>Solicitação de Notificações</h1>
+    <p>Clique no botão abaixo se o navegador não abrir o prompt automaticamente.</p>
+    <button id="btnPermissao">Ativar Notificações</button>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+        import { getMessaging } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-messaging.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyDz99jgwAcRskflE97ylR8dThFxLknMjG0",
+            authDomain: "rseg-monitoramento-e-int-21879.firebaseapp.com",
+            projectId: "rseg-monitoramento-e-int-21879",
+            messagingSenderId: "209374076836"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const messaging = getMessaging(app);
+
+        async function solicitarPermissao() {
+            console.log("Solicitando permissão...");
+            
+            const permission = await Notification.requestPermission();
+
+            if (permission === 'granted') {
+                console.log("Permissão concedida!");
+                alert("As notificações foram ativadas com sucesso.");
+            } else if (permission === 'denied') {
+                console.warn("Permissão negada pelo usuário.");
+                alert("Você bloqueou as notificações.");
+            } else {
+                console.log("O usuário fechou o prompt sem escolher.");
+            }
+        }
+
+        window.onload = solicitarPermissao;
+
+        document.getElementById('btnPermissao').addEventListener('click', solicitarPermissao);
+    </script>
+</body>
+</html>
