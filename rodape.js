@@ -7,6 +7,5 @@ document.addEventListener("DOMContentLoaded", function() {
         </div>
     </footer>`;
 
-    // Insere o rodapé ao final do corpo da página
     document.body.insertAdjacentHTML('beforeend', footerHTML);
 });

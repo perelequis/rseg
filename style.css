@@ -730,3 +730,148 @@ nav a:hover {
         font-size: 1.6rem;
     }
 }
+
+#whatsapp-invite-section {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.wa-card {
+    background-color: #1f1f1f;
+    border: 1px solid #333;
+    border-radius: 24px;
+    max-width: 450px;
+    width: 100%;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+}
+
+.wa-header {
+    display: flex;
+    align-items: center;
+    padding: 25px;
+    background-color: #252525;
+    border-bottom: 1px solid #333;
+}
+
+.wa-profile-pic-container {
+    position: relative;
+    margin-right: 20px;
+}
+
+.wa-profile-pic {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #25D366;
+}
+
+.wa-info h1 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin: 0 0 5px 0;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.wa-info span {
+    color: #25D366;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.wa-body-text {
+    padding: 30px 25px;
+    color: #dcdcdc;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.wa-body-text p {
+    margin-bottom: 20px;
+}
+
+.wa-body-text p:last-child {
+    margin-bottom: 0;
+}
+
+.wa-actions {
+    padding: 0 25px 35px 25px;
+}
+
+.wa-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+    background-color: #25D366;
+    color: #fff;
+    font-weight: 700;
+    padding: 14px 16px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+}
+
+.wa-btn:hover {
+    background-color: #1dbf57;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5);
+}
+
+/* Classe para controlar o tamanho da imagem PNG do botão */
+.wa-btn-icon {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+
+.wa-link-note {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: #666;
+    font-size: 0.85rem;
+}
+
+@media (max-width: 480px) {
+    .wa-card {
+        border-radius: 0;
+        border: none;
+        background: transparent;
+        box-shadow: none;
+    }
+
+    .wa-header {
+        background: transparent;
+        flex-direction: column;
+        text-align: center;
+        border: none;
+    }
+
+    .wa-profile-pic-container {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .wa-profile-pic {
+        width: 100px;
+        height: 100px;
+    }
+
+    .wa-body-text {
+        text-align: center;
+        padding-top: 10px;
+    }
+}
