@@ -1,1 +1,1 @@
-# Rseg Monitoramento e Internet
+# Rseg Monitoramento e Internet (Dominio Principal)
